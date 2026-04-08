@@ -9,4 +9,4 @@ export function getApiUrl(): string {
   // Default fallback for local development
   return 'http://localhost:3001';
 }
-}
+
