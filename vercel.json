@@ -1,8 +1,9 @@
 {
   "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/dist",
+  "installCommand": "npm install",
+  "framework": null,
   "env": {
-    "VITE_API_URL": "@vite_api_url"
-  },
-  "envPrefix": "VITE_"
+    "VITE_API_URL": "https://applyai-production-7884.up.railway.app"
+  }
 }
