@@ -73,7 +73,7 @@ export default function Home() {
     setIsDownloading(true);
     setDownloadError(null);
     try {
-      const apiUrl = getApiUrl();
+      const apiUrl = 'https://applyai-production-7884.up.railway.app';
       console.log('API URL being used:', apiUrl);
       const res = await fetch(`${apiUrl}/api/download-pdf`, {
         method: "POST",
