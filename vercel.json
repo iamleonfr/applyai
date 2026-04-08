@@ -1,8 +1,5 @@
 {
   "buildCommand": "npm install && npm run build",
   "outputDirectory": "dist",
-  "framework": null,
-  "env": {
-    "VITE_API_URL": "https://applyai-production-7884.up.railway.app"
-  }
+  "framework": null
 }
