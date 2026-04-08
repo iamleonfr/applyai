@@ -73,7 +73,9 @@ export default function Home() {
     setIsDownloading(true);
     setDownloadError(null);
     try {
-      const res = await fetch(`${getApiUrl()}/api/download-pdf`, {
+      const apiUrl = getApiUrl();
+      console.log('API URL being used:', apiUrl);
+      const res = await fetch(`${apiUrl}/api/download-pdf`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
