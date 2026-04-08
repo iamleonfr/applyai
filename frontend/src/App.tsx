@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { setBaseUrl } from "@/lib/api-client-react";
+import { getApiUrl } from "@/lib/config";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 
@@ -18,8 +19,8 @@ function Router() {
 }
 
 function App() {
-  // Initialize API client with base URL from environment
-  setBaseUrl(import.meta.env.VITE_API_URL);
+  // Initialize API client with runtime-detected base URL
+  setBaseUrl(getApiUrl());
 
   return (
     <QueryClientProvider client={queryClient}>
