@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useAnalyzeCV } from "@/lib/api-client-react";
+import { getApiUrl } from "@/lib/config";
 import {
   UploadCloud,
   FileText,
@@ -72,7 +73,7 @@ export default function Home() {
     setIsDownloading(true);
     setDownloadError(null);
     try {
-      const res = await fetch("/api/download-pdf", {
+      const res = await fetch(`${getApiUrl()}/api/download-pdf`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
